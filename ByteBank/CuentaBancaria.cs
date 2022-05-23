@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ByteBank.DatosCliente;
 
 namespace ByteBank
 {
@@ -10,7 +11,8 @@ namespace ByteBank
     {
         //Propiedades
 
-        public string nombreCliente;
+        //public string nombreCliente;
+        public Cliente cliente;
         public string numeroCuenta;
         public string numeroAgencia;
         public double saldo;
