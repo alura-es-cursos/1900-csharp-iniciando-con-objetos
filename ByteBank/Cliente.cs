@@ -8,9 +8,22 @@ namespace ByteBank.DatosCliente
 {
     public class Cliente
     {
-        public string nombre;
-        public string dni;
-        public string profesion;
-        
+        //public string nombre;
+        //public string dni;
+        //public string profesion;
+
+        public string Nombre
+        {
+            get;set;
+        }
+        public string Dni
+        {
+            get; set;
+        }
+        public string Profesion
+        {
+            get; set;
+        }
+
     }
 }

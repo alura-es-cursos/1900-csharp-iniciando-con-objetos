@@ -9,16 +9,63 @@ namespace ByteBank
 {
     public class CuentaBancaria
     {
-        //Propiedades
+        //Atributos o campos
 
         //public string nombreCliente;
-        public Cliente cliente;
-        public string numeroCuenta;
-        public string numeroAgencia;
-        public double saldo;
-        public double tasaInteres;
-        public double limiteSobregiro;
-        public bool cuentaActiva;
+        //private Cliente cliente;
+        //public string numeroCuenta;
+        //public string numeroAgencia;
+        private double saldo;
+        //public double tasaInteres;
+        //public double limiteSobregiro;
+        //public bool cuentaActiva;
+
+        //Propiedades
+        public Cliente Cliente
+        {
+            get;set;
+        }
+
+        public string NumeroCuenta
+        {
+            get;set;
+        }
+
+        public string NumeroAgencia
+        {
+            get; set;
+        }
+
+
+        public double Saldo
+        {
+            get { return saldo; }
+            set {
+                if (value >= 0)
+                {
+                    saldo = value;
+                }
+                else
+                {
+                    saldo = 0;
+                }
+            }
+        }
+
+        public double TasaInteres
+        {
+            get;set;
+        }
+
+        public double LimiteSobregiro
+        {
+            get; set;
+        }
+
+        public bool CuentaActiva
+        {
+            get; set;
+        }
 
         //Métodos
 
@@ -66,5 +113,23 @@ namespace ByteBank
 
         }
 
+        /*
+        public void DefinirSaldo(double saldoInicial)
+        {
+            if (saldoInicial >= 0)
+            {
+                saldo = saldoInicial;
+            }
+            else
+            {
+                Console.WriteLine("Saldo Inicial debe ser mayor o igual que 0");
+            }
+        }
+
+        public double ObtenerSaldo()
+        {
+            return saldo;
+        }
+        */
     }
 }

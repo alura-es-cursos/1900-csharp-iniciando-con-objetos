@@ -8,69 +8,70 @@ CuentaBancaria cuentaMaria = new CuentaBancaria();
 
 Cliente datosMaria = new Cliente();
 
-datosMaria.nombre = "María";
-datosMaria.dni = "80018";
-datosMaria.profesion = "Profesora";
+datosMaria.Nombre = "María";
+datosMaria.Dni = "80018";
+datosMaria.Profesion = "Profesora";
 
 //cuentaMaria.nombreCliente = "Maria";
-cuentaMaria.cliente = datosMaria;
-cuentaMaria.numeroCuenta = "9865656565";
-cuentaMaria.numeroAgencia = "986";
-cuentaMaria.saldo = 1000;
-cuentaMaria.tasaInteres = 1.25;
-cuentaMaria.limiteSobregiro = 800;
-cuentaMaria.cuentaActiva = true;
+cuentaMaria.Cliente = datosMaria;
+cuentaMaria.NumeroCuenta = "9865656565";
+cuentaMaria.NumeroAgencia = "986";
+cuentaMaria.Saldo = 1000;
+cuentaMaria.TasaInteres = 1.25;
+cuentaMaria.LimiteSobregiro = 800;
+cuentaMaria.CuentaActiva = true;
 
-Console.WriteLine("Nombre cliente: " + cuentaMaria.cliente.nombre);
-Console.WriteLine("DNI cliente: " + cuentaMaria.cliente.dni);
+Console.WriteLine("Nombre cliente: " + cuentaMaria.Cliente.Nombre);
+Console.WriteLine("DNI cliente: " + cuentaMaria.Cliente.Dni);
 
-Console.WriteLine("Número de cuenta: " + cuentaMaria.numeroCuenta);
+Console.WriteLine("Número de cuenta: " + cuentaMaria.NumeroCuenta);
 
 
 CuentaBancaria cuentaLeonardo = new CuentaBancaria();
 
 //cuentaLeonardo.nombreCliente = "Leonardo";
-if (cuentaLeonardo.cliente == null)
+if (cuentaLeonardo.Cliente == null)
 {
-    cuentaLeonardo.cliente = new Cliente();
+    cuentaLeonardo.Cliente = new Cliente();
 }
 
-cuentaLeonardo.cliente.nombre = "Leonardo";
-cuentaLeonardo.cliente.dni = "13804";
-cuentaLeonardo.cliente.profesion = "Ingeniero";
+cuentaLeonardo.Cliente.Nombre = "Leonardo";
+cuentaLeonardo.Cliente.Dni = "13804";
+cuentaLeonardo.Cliente.Profesion = "Ingeniero";
 
-Console.WriteLine("Nombre cliente: " + cuentaLeonardo.cliente.nombre);
-Console.WriteLine("DNI cliente: " + cuentaLeonardo.cliente.dni);
+Console.WriteLine("Nombre cliente: " + cuentaLeonardo.Cliente.Nombre);
+Console.WriteLine("DNI cliente: " + cuentaLeonardo.Cliente.Dni);
 
-Console.WriteLine("Número de cuenta: " + cuentaLeonardo.numeroCuenta);
-
-
-cuentaLeonardo.numeroCuenta = "1234567890";
-cuentaLeonardo.numeroAgencia = "123";
-cuentaLeonardo.saldo = 1254.65;
-cuentaLeonardo.tasaInteres = 1.25;
-cuentaLeonardo.limiteSobregiro = 500.67;
-cuentaLeonardo.cuentaActiva = true;
+Console.WriteLine("Número de cuenta: " + cuentaLeonardo.NumeroCuenta);
 
 
+cuentaLeonardo.NumeroCuenta = "1234567890";
+cuentaLeonardo.NumeroAgencia = "123";
+cuentaLeonardo.Saldo = 1254.65;
+cuentaLeonardo.TasaInteres = 1.25;
+cuentaLeonardo.LimiteSobregiro = 500.67;
+cuentaLeonardo.CuentaActiva = true;
 
-/*
-Console.WriteLine("Saldo antes del retiro:" + cuentaLeonardo.saldo);
+Console.WriteLine("Saldo Inicial - Cuenta Leonardo:" + cuentaLeonardo.Saldo);
+Console.WriteLine("Saldo Inicial - Cuenta María:" + cuentaMaria.Saldo);
+
+
+Console.WriteLine("Saldo antes del retiro:" + cuentaLeonardo.Saldo);
 
 Console.WriteLine("Retirando 120");
 
 bool retiroHecho = cuentaLeonardo.RetirarDinero(120);
 
 if (retiroHecho)
-    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.saldo);
+    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.Saldo);
 else
-    Console.WriteLine("No fue posible hacer el retiro de:" + cuentaLeonardo.saldo);
+    Console.WriteLine("No fue posible hacer el retiro de:" + cuentaLeonardo.Saldo);
 
 Console.WriteLine("Retirando -40");
 
 if (cuentaLeonardo.RetirarDinero(-40))
 {
-    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.saldo);
+    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.Saldo);
 } else
 {
     Console.WriteLine("No fue posible hacer el retiro de -40");
@@ -78,7 +79,7 @@ if (cuentaLeonardo.RetirarDinero(-40))
 Console.WriteLine("Retirando 2000");
 if (cuentaLeonardo.RetirarDinero(2000))
 {
-    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.saldo);
+    Console.WriteLine("Saldo luego del retiro:" + cuentaLeonardo.Saldo);
 }
 else
 {
@@ -87,11 +88,11 @@ else
 
 Console.WriteLine("Depositando 1000");
 cuentaLeonardo.DepositarDinero(1000);
-Console.WriteLine("Saldo luego del depósito:" + cuentaLeonardo.saldo);
+Console.WriteLine("Saldo luego del depósito:" + cuentaLeonardo.Saldo);
 
 Console.WriteLine("Depositando -500");
 cuentaLeonardo.DepositarDinero(-500);
-Console.WriteLine("Saldo luego del depósito:" + cuentaLeonardo.saldo);
+Console.WriteLine("Saldo luego del depósito:" + cuentaLeonardo.Saldo);
 
 Console.WriteLine("Transferir 500");
 double saldoATransferir = 500.00;
@@ -99,9 +100,9 @@ double saldoDespuesTransferencia = cuentaLeonardo.TransferirSaldo(500, cuentaMar
 
 Console.WriteLine("Saldo luego de transferir:" + saldoDespuesTransferencia);
 
-Console.WriteLine("Saldo de la cuenta que recibió la transferencia:" + cuentaMaria.saldo);
+Console.WriteLine("Saldo de la cuenta que recibió la transferencia:" + cuentaMaria.Saldo);
 
-*/
+
 
 
 
