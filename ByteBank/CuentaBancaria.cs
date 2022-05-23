@@ -14,5 +14,6 @@ namespace ByteBank
         public double saldo;
         public double tasaInteres;
         public double limiteSobregiro;
+        public bool cuentaActiva;
     }
 }
